@@ -13,7 +13,7 @@ const App = () => {
       { hovered: true, selected: true },
       [theme, 'cls2', 'cls3']
     )}>
-      <button onClick={toggleTheme}>TOGGLE</button>
+
       <Navbar />
       <AppRouter />
     </div>
