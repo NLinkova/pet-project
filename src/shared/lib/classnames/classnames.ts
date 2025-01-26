@@ -4,7 +4,7 @@ export function classNames(cls: string, mods?: Mods, additional?: string[]): str
     cls,
     ...additional.filter(Boolean), //filter if classname is undefined or null
     ...Object.entries(mods)
-      .filter(([value]) => Boolean(value))
+      .filter(([cls, value]) => Boolean(value))
       .map(([cls]) => cls)
   ].join(' ')
 }
