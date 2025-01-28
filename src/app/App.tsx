@@ -1,5 +1,6 @@
 import { AppRouter } from 'app/providers/router';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { Suspense } from 'react';
 import { classNames } from 'shared/lib/classnames/classnames';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
@@ -13,11 +14,13 @@ const App = () => {
       { hovered: true, selected: true },
       [theme, 'cls2', 'cls3']
     )}>
-      <Navbar />
-      <div className='content-page'>
-        <Sidebar />
-        <AppRouter />
-      </div>
+      <Suspense fallback={null}>
+        <Navbar />
+        <div className='content-page'>
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   )
 }
