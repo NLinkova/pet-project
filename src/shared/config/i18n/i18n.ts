@@ -5,8 +5,8 @@ import { initReactI18next } from 'react-i18next';
 // import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  // .use(Backend)
-  // .use(LanguageDetector)
+// .use(Backend)
+// .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
@@ -18,8 +18,7 @@ i18n
 
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
-    }
+    },
   });
-
 
 export default i18n;

@@ -10,19 +10,21 @@ const App = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={classNames('app',
+    <div className={classNames(
+      'app',
       { hovered: true, selected: true },
-      [theme, 'cls2', 'cls3']
-    )}>
+      [theme, 'cls2', 'cls3'],
+    )}
+    >
       <Suspense fallback={null}>
         <Navbar />
-        <div className='content-page'>
+        <div className="content-page">
           <Sidebar />
           <AppRouter />
         </div>
       </Suspense>
     </div>
-  )
-}
+  );
+};
 
 export default App;
