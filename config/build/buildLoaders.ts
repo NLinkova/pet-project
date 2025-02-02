@@ -43,28 +43,33 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       }
     ]
   }
-  // const hotReloadLoader = {
 
-  //   test: /\.[jt]sx?$/,
-  //   exclude: /node_modules/,
-  //   use: [
-  //     {
-  //       loader: require.resolve('ts-loader'),
-  //       options: {
-  //         getCustomTransformers: () => ({
-  //           before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
-  //         }),
-  //         transpileOnly: isDev,
-  //       },
-  //     },
-  //   ],
-  // }
-
+  const babelLoader = {
+    test: /\.(js|jsx|tsx|ts)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          ['@babel/preset-env', { targets: "defaults" }]
+        ],
+        "plugins": [
+          [
+            "i18next-extract",
+            {
+              locales: ["en", "ru"],
+              keyAsDefaultValue: true
+            },
+          ],
+        ]
+      }
+    }
+  }
   return [
-    typescriptLoader,
     cssLoader,
     svgLoader,
-    fileLoader
-    // hotReloadLoader
+    fileLoader,
+    babelLoader,
+    typescriptLoader,
   ]
 }
