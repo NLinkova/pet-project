@@ -1,4 +1,5 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import { useTranslation } from 'react-i18next';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { classNames } from 'shared/lib/classnames/classnames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
@@ -9,6 +10,8 @@ interface ThemeSwitcherProps {
 
 const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation('translation');
+
   return (
     <Button
       theme={ThemeButton.CLEAR}
@@ -16,7 +19,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       className={classNames('', {}, [className])}
     >
       {theme === Theme.DARK ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
-      TOGGLE
+      {t('Кнопка темы')}
     </Button>
   );
 };
