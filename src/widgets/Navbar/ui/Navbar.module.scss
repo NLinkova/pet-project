@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  height: var( --navbar-height);
+  height: var(--navbar-height);
   background-color: var(--inverted-bg-color);
   display: flex;
   flex-direction: row;
@@ -8,12 +8,11 @@
   justify-content: space-between;
   gap: 30px;
   padding: 20px;
-
 }
 
-  .navbar > a {
-    text-decoration: none;
-  }
+.navbar > a {
+  text-decoration: none;
+}
 
 .links {
   display: flex;
