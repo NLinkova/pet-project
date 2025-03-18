@@ -4,5 +4,8 @@
   "Главная страница": "Main page",
   "Язык": "English",
   "Кнопка темы": "Toggle",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Error happened",
+  "Обновить страницу": "Refresh the page",
+  "throw error": "throw error"
 }
