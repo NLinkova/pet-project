@@ -1,7 +1,7 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classnames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
