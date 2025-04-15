@@ -8,7 +8,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     historyApiFallback: true, // allows the use of the HTML5 History API for SPA
     hot: true,
     client: {
-      overlay: false
-    }
+      overlay: false,
+    },
   };
 }

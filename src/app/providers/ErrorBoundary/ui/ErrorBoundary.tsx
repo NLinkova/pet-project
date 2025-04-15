@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 import { ErrorPage } from 'widgets/ErrorPage/ui/ErrorPage';
 

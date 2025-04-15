@@ -25,4 +25,3 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
 };
 
 export { ThemeSwitcher };
-

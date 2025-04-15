@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classnames/classNames';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher/ThemeSwitcher';
@@ -9,6 +10,7 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ className }: SidebarProps) => {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState<boolean>(false);
 
   const onToggle = () => {
@@ -16,16 +18,23 @@ export const Sidebar = ({ className }: SidebarProps) => {
   };
 
   return (
-    <div data-testid="sidebar"
-      className={classNames(cls.Sidebar, {
-        [cls.expanded]: expanded
-      },
-        [className])}
+    <div
+      data-testid="sidebar"
+      className={classNames(
+        cls.Sidebar,
+        {
+          [cls.expanded]: expanded,
+        },
+        [className],
+      )}
     >
       <button
         data-testid="sidebar-toggle"
         type="button"
-        onClick={onToggle}>toggle</button>
+        onClick={onToggle}
+      >
+        {t('Кнопка темы')}
+      </button>
       <div className={cls.swithers}>
         <ThemeSwitcher />
         <LangSwitcher className={cls.lang} />

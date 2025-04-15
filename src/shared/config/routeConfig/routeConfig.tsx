@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
 import NotFoundPage from 'pages/NotFoundPage';
@@ -12,7 +13,7 @@ export enum AppRoutes {
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.ABOUT]: '/about',
-  //gonna be the last
+  // gonna be the last
   [AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -28,5 +29,5 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,
     element: <NotFoundPage />,
-  }
+  },
 };

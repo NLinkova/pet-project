@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classnames/classNames';
