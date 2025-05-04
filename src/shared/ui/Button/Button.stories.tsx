@@ -23,11 +23,11 @@ Clear.args = {
   theme: ThemeButton.CLEAR,
 };
 
-// export const Outline = Template.bind({});
-// Outline.args = {
-//   children: 'Text',
-//   theme: ThemeButton.OUTLINE,
-// };
+export const Outline = Template.bind({});
+Outline.args = {
+  children: 'Text',
+  theme: ThemeButton.OUTLINE,
+};
 
 // export const OutlineDark = Template.bind({});
 // OutlineDark.args = {

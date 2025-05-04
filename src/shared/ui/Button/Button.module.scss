@@ -9,14 +9,23 @@
 
 .Button:hover {
   background-color: rgb(146 114 177);
-
-  // opacity: 0.6;
 }
 
 .clear {
-  // padding: 0;
   margin: 0;
   border: none;
   background: none;
   outline: none;
+}
+
+.outline {
+  color: var(--bg-color);
+  background-color: var(--secondary-color);
+}
+
+.outline:hover {
+  background-color: var(--bg-color);
+    color: var(--primary-color);
+  border: 2px solid;
+  border-color: var(--inverted-bg-color);
 }
