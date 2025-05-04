@@ -2,7 +2,7 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-import { classNames } from 'shared/lib/classnames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
