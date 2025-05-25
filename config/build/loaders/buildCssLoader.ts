@@ -1,4 +1,5 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import sass from 'sass';
 
 export function buildCssLoader(isDev: boolean) {
   return {
@@ -16,7 +17,15 @@ export function buildCssLoader(isDev: boolean) {
           },
         },
       },
-      'sass-loader',
+      {
+        loader: 'sass-loader',
+        options: {
+          api: 'modern',
+          implementation: sass,
+          sassOptions: {
+          },
+        },
+      },
     ],
   };
 }
