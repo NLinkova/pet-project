@@ -3,7 +3,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export enum ThemeButton {
+  // eslint-disable-next-line no-unused-vars
   CLEAR = 'clear',
+  // eslint-disable-next-line no-unused-vars
   OUTLINE = 'outline'
 }
 

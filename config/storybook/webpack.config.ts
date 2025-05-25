@@ -1,6 +1,6 @@
-// config/storybook/webpack.config.ts
-import type { RuleSetRule, Configuration } from 'webpack';
+/* eslint-disable no-param-reassign */
 import path from 'path';
+import type { Configuration, RuleSetRule } from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
@@ -16,11 +16,24 @@ export default async ({ config }: { config: Configuration }) => {
   config.resolve.modules = [...(config.resolve.modules || []), paths.src];
   config.resolve.extensions = [...(config.resolve.extensions || []), '.ts', '.tsx'];
 
-  config.module.rules = (config.module.rules || []).map((rule: RuleSetRule) => {
-    if (rule.test instanceof RegExp && rule.test.test('.svg')) {
-      return { ...rule, exclude: /\.svg$/i };
+  if (!config.module) {
+    config.module = { rules: [] };
+  }
+
+  if (!config.module.rules) {
+    config.module.rules = [];
+  }
+
+  config.module.rules.forEach((rule) => {
+    if (
+      rule
+      && typeof rule !== 'string'
+      && 'test' in rule
+      && rule.test instanceof RegExp
+      && rule.test.test('.svg')
+    ) {
+      (rule as RuleSetRule).exclude = /\.svg$/i;
     }
-    return rule;
   });
 
   config.module.rules.push({
