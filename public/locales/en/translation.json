@@ -1,13 +1,10 @@
 {
-  "Тестовый пример": "Test example",
-  "Перевод": "Translate",
-  "Главная страница": "Main page",
-  "О нас": "About page",
-  "Язык": "English",
-  "Кнопка темы": "Toggle",
-  "Sidebar Button": "Toggle sidebar",
-  "Страница не найдена": "Page not found",
-  "Произошла непредвиденная ошибка": "Error happened",
-  "Обновить страницу": "Refresh the page",
+  "Main page": "Main page",
+  "About page": "About page",
+  "Language": "English",
+  "Theme toggle": "Toggle",
+  "Page not found": "Page not found",
+  "Error happened": "Error happened",
+  "Refresh the page": "Refresh the page",
   "throw error": "throw error"
 }

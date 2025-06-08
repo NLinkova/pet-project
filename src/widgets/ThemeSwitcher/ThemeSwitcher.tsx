@@ -19,7 +19,7 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       className={classNames('', {}, [className])}
     >
       {theme === Theme.DARK ? <FaMoon /> : <FaSun />}
-      {t('Кнопка темы')}
+      {t('Theme toggle')}
     </Button>
   );
 };

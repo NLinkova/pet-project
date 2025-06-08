@@ -17,13 +17,13 @@ const Navbar = ({ className }: NavbarProps) => {
           theme={AppLinkTheme.SECONDARY}
           to="/"
         >
-          {t('Главная страница')}
+          {t('Main page')}
         </AppLink>
         <AppLink
           theme={AppLinkTheme.SECONDARY}
           to="/about"
         >
-          {t('О нас')}
+          {t('About page')}
         </AppLink>
       </div>
     </div>
