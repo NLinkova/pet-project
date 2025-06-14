@@ -1,5 +1,4 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import { useTranslation } from 'react-i18next';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -10,7 +9,6 @@ interface ThemeSwitcherProps {
 
 const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
   const { theme, toggleTheme } = useTheme();
-  const { t } = useTranslation('translation');
 
   return (
     <Button
@@ -19,7 +17,6 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       className={classNames('', {}, [className])}
     >
       {theme === Theme.DARK ? <FaMoon /> : <FaSun />}
-      {t('Theme toggle')}
     </Button>
   );
 };
