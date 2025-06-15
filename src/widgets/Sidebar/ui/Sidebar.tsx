@@ -45,7 +45,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
         >
           <FaNewspaper className={cls.icon} />
           <span className={cls.link}>
-            {t('About Page')}
+            {t('About page')}
           </span>
         </AppLink>
       </div>
