@@ -11,15 +11,21 @@ const expectedDir = joinPath(lokiDir, 'reference');
 const diffDir = joinPath(lokiDir, 'difference');
 
 (async function main() {
+  const actualScreenshots = await asyncReaddir(actualDir);
+  const expectedScreenshots = await asyncReaddir(expectedDir);
   const diffs = await asyncReaddir(diffDir);
 
+  // Здесь должна быть логика для определения newItems и deletedItems
+  const newItems = actualScreenshots.filter((item) => !expectedScreenshots.includes(item));
+  const deletedItems = expectedScreenshots.filter((item) => !actualScreenshots.includes(item));
+
   await writeFileAsync(joinPath(lokiDir, 'report.json'), JSON.stringify({
-    newItems: [],
-    deletedItems: [],
-    passedItems: [],
-    failedItems: diffs,
-    expectedItems: diffs,
-    actualItems: diffs,
+    newItems, // Скриншоты, которых нет в reference
+    deletedItems, // Скриншоты, которых нет в current
+    passedItems: actualScreenshots.filter((item) => !diffs.includes(item)), // Прошедшие проверку
+    failedItems: diffs, // Не прошедшие проверку
+    expectedItems: expectedScreenshots,
+    actualItems: actualScreenshots,
     diffItems: diffs,
     actualDir: relative(lokiDir, actualDir),
     expectedDir: relative(lokiDir, expectedDir),
