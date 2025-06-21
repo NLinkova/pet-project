@@ -18,6 +18,12 @@
   background: none;
   outline: none;
 }
+.clearInverted {
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--inverted-primary-color);
+}
 
 .outline {
   color: var(--bg-color);

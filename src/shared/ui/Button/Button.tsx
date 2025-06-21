@@ -5,6 +5,7 @@ import cls from './Button.module.scss';
 
 export enum ButtonTheme {
   CLEAR = 'clear',
+  CLEAR_INVERTED = 'clearInverted',
   OUTLINE = 'outline',
   BACKGROUND = 'background',
   BACKGROUND_INVERTED = 'backgroundInverted'
@@ -44,7 +45,7 @@ export const Button: FC<ButtonProps> = (props) => {
       className={classNames(
         cls.Button,
         mods,
-        [className],
+        [className]
       )}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...otherProps}
