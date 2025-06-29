@@ -6,5 +6,8 @@
   "Page not found": "Page not found",
   "Error happened": "Error happened",
   "Refresh the page": "Refresh the page",
-  "throw error": "throw error"
+  "throw error": "throw error",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Login": "Login"
 }

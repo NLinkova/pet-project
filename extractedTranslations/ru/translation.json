@@ -3,6 +3,7 @@
   "About us": "About us",
   "Error happened": "Произошла непредвиденная ошибка",
   "Language": "Русский",
+  "Login": "Login",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
@@ -12,6 +13,8 @@
   "Page not found": "Страница не найдена",
   "Refresh the page": "Обновить страницу",
   "Short lang": "RU",
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "throw error",
   "Войти": "Войти"
 }

@@ -6,5 +6,8 @@
   "Page not found": "Страница не найдена",
   "Error happened": "Произошла непредвиденная ошибка",
   "Refresh the page": "Обновить страницу",
-  "throw error": "throw error"
+  "throw error": "throw error",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Login": "Войти"
 }
